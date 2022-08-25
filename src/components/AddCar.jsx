@@ -35,12 +35,12 @@ const AddCar = () => {
         </header>
           <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">Plate Number</label>
-              <input onChange={(e)=> onChange(e)} value={formValues.num_plate} type="text" className="form-control" name='num_plate' aria-describedby="emailHelp"/>
+              <input required minLength={3} maxLength={9} onChange={(e)=> onChange(e)} value={formValues.num_plate} type="text" className="form-control" name='num_plate' aria-describedby="emailHelp"/>
                   
           </div>
           <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">Driver Name</label>
-              <input onChange={(e)=> onChange(e)} value={formValues.driver_name} type="text" className="form-control" name='driver_name' />
+              <input required minLength={3} onChange={(e)=> onChange(e)} value={formValues.driver_name} type="text" className="form-control" name='driver_name' />
           </div>
           <div className="row">
               <button id="liveToastBtn" type="submit" className="btn btn-primary w-50" style={{ margin: '5px auto', alignItems:'center',fontWeight:'700' }}>🚗  Park Car</button>
